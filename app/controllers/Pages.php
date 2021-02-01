@@ -9,7 +9,11 @@
         'title' => 'SharePosts',
         'description' => 'Simple social network built on the TraversyMVC PHP framework'
       ];
-     
+		 
+			if (isLoggedIn()){
+				redirect('/posts/');
+			}
+
       $this->view('pages/index', $data);
     }
 
